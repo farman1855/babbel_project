@@ -3,18 +3,13 @@ import sys
 import os
 sys.path.append(".")
 from module.helpers import Helpers
-import requests
+import pandas as pd
 
 
 class UnitTest(TestCase):
     def test_get_path(self):
-        path = Helpers.get_path().strip()
-        path1 = os.getcwd().strip()
-        self.assertEqual(path, path1)
+        data = Helpers.get_rate()
+        df = Helpers.get_dataframe(data)
+        self.assertEqual(list(df.columns),list(pd.read_csv(os.getcwd()+'/data/test.csv',nrows=1).columns))
 
-    def test_get_rate(self):
-        config = Helpers.get_config()
-        url = config['url']
-        response = requests.get(url)
-        data = response.json()
-        self.assertEqual(Helpers.get_rate(), data)
+

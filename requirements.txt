@@ -1,2 +1,7 @@
 python-crontab==2.4.2
 requests==2.19.1
+pandas==0.23.3
+json-cfg==0.4.2
+black==19.10b0
+isort==4.3.21
+flake8==3.7.9

@@ -1,13 +1,17 @@
 # -*- coding: utf-8 -*-
-from . import helpers
+import os
+import sys
 
 
-def get_hmm():
-    """Get a thought."""
-    return "hmmm..."
+sys.path.append(os.getcwd()+"/helpers.py")
+from helpers import Helpers
 
 
-def hmm():
-    """Contemplation..."""
-    if helpers.get_answer():
-        print(get_hmm())
+def main():
+    data = Helpers.get_rate()
+    df = Helpers.get_dataframe(data)
+    Helpers.write_data(df)
+
+if __name__ == '__main__':
+    main()
+
