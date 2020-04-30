@@ -14,9 +14,13 @@ install:
 	pip3 install -U flake8;
 update-requirements: install
 	pip3 freeze > requirements.txt
-isort: venv/bin/isort # Sorts imports using isort
-	venv/bin/isort *.py
-
-flake8: venv/bin/flake8 # Lints code using flake8
-	. venv/bin/activate;
-	venv/bin/flake8 *.py
+clean:
+	venv/bin/black *.py; \
+	venv/bin/black module/*.py;
+	venv/bin/isort *.py; \
+	venv/bin/isort module/*.py; \
+	venv/bin/flake8 *.py; \
+	venv/bin/flake8 module/*.py;
+run:
+	. venv/bin/activate; \
+	python3 main.py;

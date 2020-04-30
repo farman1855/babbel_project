@@ -1,7 +1,11 @@
 from crontab import CronTab
-
-cron = CronTab(user='farman_ali')
-job = cron.new(command='python3 /home/farman_ali/ide/bubbel-project/sample/helpers.py')
+import os
+import getpass
+currentPath=os.path.dirname(os.path.abspath(__file__))
+getUser=getpass.getuser()
+command1 = currentPath+"/venv/bin/python3 "+currentPath+"/module/helpers.py"
+cron=CronTab(user=getUser)
+job = cron.new(command=command1)
 job.minute.every(1)
 
 cron.write()
