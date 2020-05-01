@@ -13,7 +13,7 @@ class Helpers:
         return path
 
     def get_config():
-        with open(os.path.dirname(Helpers.get_path()) + '/config/config.json') as config_file:
+        with open(Helpers.get_path() + '/config/config.json') as config_file:
             data = json.load(config_file)
             return data
 
