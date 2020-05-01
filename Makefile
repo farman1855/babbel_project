@@ -12,7 +12,7 @@ install:
     	pip3 install -r requirements.txt;
 update-requirements: install
 	pip3 freeze > requirements.txt
-clean:
+format-code:
 	venv/bin/black *.py; \
 	venv/bin/black module/*.py;
 	venv/bin/isort *.py; \
@@ -27,4 +27,8 @@ test:
 	python3 -m unittest tests/integration_tests/integration_test.py;
 run:
 	. venv/bin/activate; \
+	find . -name '__pycache__' | xargs rm -rf;
 	python3 main.py;
+clean:
+	sudo rm -rf venv
+	sudo rm -rf data/exchangerate.csv
