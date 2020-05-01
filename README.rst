@@ -8,9 +8,12 @@ PROJECT REQUIRMENT
 ===================
 
 To run this project we have following requirment:
-* Python_=> 3.6.10
-* Ubuntu_=> 16.04 (I have tested this on ubuntu and also i have made a Make file for ubuntu)
-* Make sure you have install make already.
+
+        * Python_=> 3.6.10
+        
+        * Ubuntu_=> 16.04 (I have tested this on ubuntu and also i have made a Make file for ubuntu)
+
+        * Make sure you have install make already.
 
 
 PROJECT SETUP
