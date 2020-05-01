@@ -31,9 +31,9 @@ Instructions
 #. Run the following command to create virtual environment:
 
         make init
- 
- 
- #. After creation of environment we need to install dependencies that required to run our project.To install dependencies run following command:
+
+
+#. After creation of environment we need to install dependencies that required to run our project.To install dependencies run following command:
         make install
 
 #. (Opentional) If we want to reformat code or want to test our code quality we need to run following command:
