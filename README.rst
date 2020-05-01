@@ -24,24 +24,33 @@ Instructions
 
         sudo apt-get install unzip
         cd bubbel_project
+        
+        
  #. Edit the config.json ``config/config.json`` to update your api key from excahnge rates.
+ 
+ 
  #. Run the following command to create virtual environment:
- 
+
         make init
-#. After creation of environment we need to install dependencies that required to run our project.To install dependencies run following command:
  
+ 
+#. After creation of environment we need to install dependencies that required to run our project.To install dependencies run following command:
         make install
+
 #. (Opentional) If we want to reformat code or want to test our code quality we need to run following command:
  
         make format-code
- #. To test code i have written two type of test cases (unit tests,integration tests).To run these test cases you need following command:
+ 
+#. To test code i have written two type of test cases (unit tests,integration tests).To run these test cases you need following command:
  
         make test
- #. Finally to run a project you need following command:
+
+#. Finally to run a project you need following command:
  
         make run
-  #. If you want to csv file and want to stop project you need to run following command:
-   
+ 
+#. If you want to csv file and want to stop project you need to run following command:
+
         make clean
  
  
