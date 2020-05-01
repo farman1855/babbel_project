@@ -24,9 +24,8 @@ Instructions
 
         sudo apt-get install unzip
         cd bubbel_project
-        
-        
- #. Edit the config.json ``config/config.json`` to update your api key from excahnge rates.
+
+#. Edit the config.json ``config/config.json`` to update your api key from excahnge rates.
  
  
  #. Run the following command to create virtual environment:
