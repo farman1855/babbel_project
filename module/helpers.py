@@ -53,7 +53,7 @@ class Helpers:
         return df
 
     def write_data(df):
-        filename = os.path.dirname(Helpers.get_path()) + "/data/exchangerate.csv"
+        filename = Helpers.get_path() + "/data/exchangerate.csv"
         if not os.path.isfile(filename):
             df.to_csv(filename, header="column_names", index=False)
         else:
